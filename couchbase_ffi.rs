@@ -1,7 +1,4 @@
-/***************
-* Enumerations *
-****************/
-// lcb_DUMPFLAGS : couchbase.h
+
 pub enum lcb_DUMPFLAGS {
     LCB_DUMP_VBCONFIG =  0x01,
     LCB_DUMP_PKTINFO = 0x02,
