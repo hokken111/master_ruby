@@ -1,4 +1,3 @@
-
 pub enum lcb_DUMPFLAGS {
     LCB_DUMP_VBCONFIG =  0x01,
     LCB_DUMP_PKTINFO = 0x02,
@@ -6,7 +5,6 @@ pub enum lcb_DUMPFLAGS {
     LCB_DUMP_ALL = 0xff,
 }
 
-// lcb_GETNODETYPE : couchbase.h
 pub enum lcb_GETNODETYPE {
     LCB_NODE_HTCONFIG = 0x01,
     LCB_NODE_DATA = 0x02,
@@ -17,7 +15,6 @@ pub enum lcb_GETNODETYPE {
     LCB_NODE_HTCONFIG_ANY = 0x11,
 }
 
-// lcb_http_method_t : couchbase.h
 #[derive(Copy)]
 pub enum lcb_http_method_t {
     LCB_HTTP_METHOD_GET = 0,
@@ -42,7 +39,6 @@ pub enum lcb_http_type_t {
     LCB_HTTP_TYPE_MAX,
 }
 
-// lcb_io_ops_type_t : couchbase.h
 #[derive(Copy)]
 pub enum lcb_io_ops_type_t {
     LCB_IO_OPS_INVALID = 0x00,
@@ -61,7 +57,6 @@ impl Default for lcb_io_ops_type_t {
     fn default() -> Self { unsafe { zeroed() } }
 }
 
-// lcb_observe_options_t : couchbase.h
 #[derive(Copy)]
 pub enum lcb_observe_options_t {
     LCB_OBSERVE_MASTER_ONLY = 0x01,
@@ -73,7 +68,6 @@ impl Default for lcb_observe_options_t {
     fn default() -> Self { unsafe { zeroed() } }
 }
 
-// lcb_observe_t : couchbase.h
 #[derive(Copy)]
 pub enum lcb_observe_t {
     LCB_OBSERVE_FOUND = 0x00,
@@ -89,7 +83,6 @@ impl Default for lcb_observe_t {
     fn default() -> Self { unsafe { zeroed() } }
 }
 
-// lcb_replica_t : couchbase.h
 #[derive(Copy)]
 pub enum lcb_replica_t {
     LCB_REPLICA_FIRST = 0x00,
