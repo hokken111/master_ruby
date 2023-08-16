@@ -221,14 +221,6 @@ pub type lcb_flush_callback = Option<extern "C" fn(
     resp: *const lcb_flush_resp_t
 ) -> ()>;
 
-// lcb_get_callback : couchbase.h
-// TODO: nullable pointer optimization
-// pub type lcb_get_callback = Option<extern "C" fn(
-//     instance: lcb_t,
-//     cookie: *const c_void,
-//     error: lcb_error_t,
-//     resp: *const lcb_get_resp_t
-// ) -> ()>;
 pub type lcb_get_callback = extern "C" fn(
     instance: lcb_t,
     cookie: *const c_void,
@@ -269,15 +261,14 @@ pub type lcb_stat_callback = Option<extern "C" fn(
     resp: *const lcb_server_stat_resp_t
 ) -> ()>;
 
-// lcb_store_callback : couchbase.h
-// TODO: Figure out nullable pointer optimization
-// pub type lcb_store_callback = Option<extern "C" fn(
-//     instance: lcb_t,
-//     cookie: *const c_void,
-//     operation: lcb_storage_t,
-//     error: lcb_error_t,
-//     resp: *const lcb_store_resp_t
-// ) -> ()>;
+pub type lcb_store_callback = extern "C" fn(
+    instance: lcb_t,
+    cookie: *const c_void,
+    operation: lcb_storage_t,
+    error: lcb_error_t,
+    resp: *const lcb_store_resp_t
+) -> ();
+
 pub type lcb_store_callback = extern "C" fn(
     instance: lcb_t,
     cookie: *const c_void,
